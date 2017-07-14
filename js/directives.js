@@ -18,10 +18,6 @@ function pageTitle($rootScope, $timeout) {
     }
 }
 
-
-
-
-
 /**
  *
  * Pass all functions into module

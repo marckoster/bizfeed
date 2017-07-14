@@ -2309,7 +2309,7 @@ angular.module('ngMockE2E', ['ng']).config(['$provide', function($provide) {
  *   });
  * ```
  *
- * Afterwards, bootstrap your app with this new module.
+ * Afterwards, metro your app with this new module.
  */
 
 /**

@@ -9337,7 +9337,7 @@ function minErr(module, ErrorConstructor) {
   encodeUriSegment: true,
   encodeUriQuery: true,
   angularInit: true,
-  bootstrap: true,
+  metro: true,
   getTestability: true,
   snake_case: true,
   bindJQuery: true,
@@ -10808,7 +10808,7 @@ function angularInit(element, bootstrap) {
  *
  * See: {@link guide/bootstrap Bootstrap}
  *
- * Note that Protractor based end-to-end tests cannot use this function to bootstrap manually.
+ * Note that Protractor based end-to-end tests cannot use this function to metro manually.
  * They must use {@link ng.directive:ngApp ngApp}.
  *
  * Angular will detect if it has been loaded into the browser more than once and only allow the
@@ -10830,7 +10830,7 @@ function angularInit(element, bootstrap) {
  *   .controller('WelcomeController', function($scope) {
  *       $scope.greeting = 'Welcome!';
  *   });
- *   angular.bootstrap(document, ['demo']);
+ *   angular.metro(document, ['demo']);
  * </script>
  * </body>
  * </html>
@@ -11133,7 +11133,7 @@ function setupModuleLoader(window) {
 
   var angular = ensure(window, 'angular', Object);
 
-  // We need to expose `angular.$$minErr` to modules such as `ngResource` that reference it during bootstrap
+  // We need to expose `angular.$$minErr` to modules such as `ngResource` that reference it during metro
   angular.$$minErr = angular.$$minErr || minErr;
 
   return ensure(angular, 'module', function() {
@@ -14324,7 +14324,7 @@ var $AnimateProvider = ['$provide', function($provide) {
    *
    * @description
    * Sets and/or returns the CSS class regular expression that is checked when performing
-   * an animation. Upon bootstrap the classNameFilter value is not set at all and will
+   * an animation. Upon metro the classNameFilter value is not set at all and will
    * therefore enable $animate to attempt to perform an animation on any element that is triggered.
    * When setting the `classNameFilter` value, animations will only be performed on elements
    * that successfully match the filter expression. This in turn can boost performance
@@ -19499,7 +19499,7 @@ function $HttpProvider() {
    * Configure $http service to combine processing of multiple http responses received at around
    * the same time via {@link ng.$rootScope.Scope#$applyAsync $rootScope.$applyAsync}. This can result in
    * significant performance improvement for bigger applications that make many HTTP requests
-   * concurrently (common during application bootstrap).
+   * concurrently (common during application metro).
    *
    * Defaults to false. If no value is specified, returns the current configured value.
    *
@@ -26433,7 +26433,7 @@ function $RootScopeProvider() {
  */
 
 
-// the implementation is in angular.bootstrap
+// the implementation is in angular.metro
 
 /**
  * @description
@@ -33671,7 +33671,7 @@ var ngControllerDirective = [function() {
   */
 
 // ngCsp is not implemented as a proper directive any more, because we need it be processed while we
-// bootstrap the system (before $parse is instantiated), for this reason we just have
+// metro the system (before $parse is instantiated), for this reason we just have
 // the csp() fn that looks for the `ng-csp` attribute anywhere in the current doc
 
 /**
@@ -39463,7 +39463,7 @@ if (window.angular.bootstrap) {
 }
 
 //try to bind to jquery now so that one can write jqLite(document).ready()
-//but we will rebind on bootstrap again.
+//but we will rebind on metro again.
 bindJQuery();
 
 publishExternalAPI(angular);
@@ -39613,7 +39613,7 @@ $provide.value("$locale", {
 
 /**
  * Setup file for the Scenario.
- * Must be first in the compilation/bootstrap list.
+ * Must be first in the compilation/metro list.
  */
 
 // Public namespace

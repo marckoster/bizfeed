@@ -896,7 +896,7 @@
       });
     }
     if(initModules.length === 0) {
-      throw 'No module found during bootstrap, unable to init ocLazyLoad';
+      throw 'No module found during metro, unable to init ocLazyLoad';
     }
 
     var addReg = function addReg(moduleName) {

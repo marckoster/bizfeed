@@ -21,6 +21,11 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) {
             templateUrl: "views/main.html",
             data: { pageTitle: 'Bizfeed' ,  heading: 'Dashboard' }
         })
+        .state('dashboard.create', {
+            url: "/create",
+            templateUrl: "views/create.html",
+            data: { pageTitle: 'Bizfeed' ,  heading: 'Dashboard' }
+        })
 }
 angular
     .module('bizfeed')

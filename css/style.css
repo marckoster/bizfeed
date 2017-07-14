@@ -1,0 +1,11 @@
+.bg-navy {
+    background-color: #0072c6 !important;
+}
+.fg-navy {
+    background-color: #0072c6 !important;
+}
+
+.dropzone {
+    margin-top: 5px;
+    border: 1px solid #d9d9d9;
+}

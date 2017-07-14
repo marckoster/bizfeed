@@ -119,7 +119,7 @@ function setupModuleLoader(window) {
 
   var angular = ensure(window, 'angular', Object);
 
-  // We need to expose `angular.$$minErr` to modules such as `ngResource` that reference it during bootstrap
+  // We need to expose `angular.$$minErr` to modules such as `ngResource` that reference it during metro
   angular.$$minErr = angular.$$minErr || minErr;
 
   return ensure(angular, 'module', function() {
