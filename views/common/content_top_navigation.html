@@ -1,0 +1,19 @@
+<!-- Wrapper-->
+<div class="top-navigation">
+
+    <!-- Navigation -->
+    <div ng-include="'views/common/top_navigation.html'"></div>
+
+    <!-- Page wraper -->
+    <!-- ng-class with current state name give you the ability to extended customization your view -->
+    <div class="{{$state.current.name}}">
+
+        <!-- Main view  -->
+        <div ui-view></div>
+
+
+    </div>
+    <!-- End page wrapper-->
+
+</div>
+<!-- End wrapper-->
