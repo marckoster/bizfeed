@@ -1,29 +1,32 @@
 <div class="container animated fadeInRight" ng-controller="CreateCtrl">
-    <div class="grid">
-        <h1>Neuen Eintrag erstellen</h1>
-        <div class="row cells2">
-            <div class="cell">
-                <label>Title</label>
-                <div class="input-control text full-size">
-                    <input type="text">
-                </div>
-                <label>Teaser</label>
-                <div class="input-control text full-size">
-                    <input type="text">
-                </div>
-                <label>Inhalt</label>
-                <div class="input-control textarea full-size">
-                    <textarea></textarea>
-                </div>
-                <label>Tags</label>
-                <div class="input-control text full-size">
-                    <input type="text">
-                </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Neuen Eintrag erstellen</h1>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-TextField">
+                <label class="ms-Label">Titel</label>
+                <input class="ms-TextField-field" type="text" value="" placeholder="">
             </div>
-            <div class="cell">
-                <label>Image</label>
-                <div class="dropzone" options="dzOptions" callbacks="dzCallbacks" methods="dzMethods" ng-dropzone>
-                </div>
+            <div class="ms-TextField">
+                <label class="ms-Label">Teaser</label>
+                <input class="ms-TextField-field" type="text" value="" placeholder="">
+            </div>
+            <div class="ms-TextField ms-TextField--multiline">
+                <label class="ms-Label">Inhalt</label>
+                <textarea class="ms-TextField-field" rows="3"></textarea>
+            </div>
+            <div class="ms-TextField">
+                <label class="ms-Label">Tags</label>
+                <input class="ms-TextField-field" type="text" value="" placeholder="">
+            </div>
+            <button class="ms-Button ms-Button--primary">
+                <span class="ms-Button-label">Create Feed</span>
+            </button>
+        </div>
+        <div class="col-md-6">
+            <label>Image</label>
+            <div class="dropzone" options="dzOptions" callbacks="dzCallbacks" methods="dzMethods" ng-dropzone>
             </div>
         </div>
     </div>

@@ -1,3 +1,4 @@
+<!--
 <div class="app-bar navy">
     <a class="app-bar-element">
         <span id="toggle-tiles-dropdown" class="mif-apps mif-2x"></span>
@@ -13,4 +14,30 @@
 
 
 </div>
+-->
+<div class="ms-CommandBar ms-CommandBar--navBar">
+    <div class="ms-CommandBar-mainArea">
+        <div class="ms-CommandButton ms-CommandButton--actionButton">
+            <button class="ms-CommandButton-button">
+                <span class="ms-CommandButton-icon ms-fontColor-themePrimary"><i
+                        class="ms-Icon ms-Icon--GlobalNavButton"></i></span>
+                <span class="ms-CommandButton-label"></span>
+            </button>
+        </div>
+        <div class="ms-CommandButton ms-CommandButton--pivot">
+            <a class="ms-CommandButton-button" ui-sref-active="is-active" ui-sref="dashboard.main"
+               href="#/dashboard/main"> <span class="ms-CommandButton-label">YOUR COMPANY</span> </a>
+        </div>
+        <div class="ms-CommandBar-sideCommands">
+            <div class="ms-CommandButton ms-CommandButton--pivot">
+                <a class="ms-CommandButton-button" ui-sref-active="is-active" ui-sref="dashboard.create"
+                   href="#/dashboard/create"> <span class="ms-CommandButton-label">Create</span> </a>
+            </div>
+            <div class="ms-CommandButton ms-CommandButton--pivot">
 
+                <img src="https://randomuser.me/api/portraits/men/52.jpg" class="navbarImage">
+
+            </div>
+        </div>
+    </div>
+</div>
